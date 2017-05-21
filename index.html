@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Concentric circles"/>
+    <title> Stock Volatility </title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="lib/daterangepicker/daterangepicker.css" rel="stylesheet"/>
+    <link href="index.css" rel="stylesheet"/>
+    <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+    <script src="lib/d3.v3.min.js"></script>
+    <script src="lib/jquery-3.2.0.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/moment.min.js"></script>
+</head>
+
+<body style="margin: 15px;">
+    <div class="container-fluid">
+      <div class="row">
+        <h3 id="viz-title">  </h3>
+        <hr />
+      </div>
+
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 navbar navbar-default" style="padding-top: 7px; background-color: white; border-color: white">
+          <form class="form-inline">
+            <div class="form-group">
+              <label for="sector-select"> Sector </label>
+              <select class="form-control" id="sector-select">
+                <option value="financials">Financials</option>
+                <option value="consumer_goods">Consumer Goods</option>
+                <option value="healthcare">HealthCare</option>
+                <option value="utilities">Utilities</option>
+                <option value="technology">Technology</option>
+                <option value="services">Services</option>
+                <option value="industrial_goods">Industrial Goods</option>
+                <option value="basic_materials">Basic Materials</option>
+                <option value="energy">Energy</option>
+                <option value="real_estate">Real Estate</option>
+                
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date-select"> Date </label>
+              <input type="text" name="daterange" />
+            </div>
+
+            <div class="form-group">
+              <label for="perf-select"> Avg Perf </label>
+              <select class="form-control" id="perf-select">
+                <option value="0.0">All</option>
+                <option value="0.025"> >= 0.025</option>
+                <option value="0.050"> >= 0.050</option>
+                <option value="0.10"> >= 0.10</option>
+                <option value="0.50"> >= 0.50</option>
+              </select>
+            </div>
+            
+          </form>
+        </div>
+        <div class="col-md-2">
+        </div>
+          
+      </div>
+      <div class="row">
+        <div class="col-lg-10" style="float: none; margin: 0 auto;">
+          <svg width="860" height="600" style="background-color: #f8f8f8"></svg>
+        </div>
+      </div>  
+    </div>
+    
+</body>
+<script src="lib/jquery-3.2.0.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/daterangepicker/moment.min.js"></script>
+<script src="lib/daterangepicker/daterangepicker.js"></script>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,36 @@
+h3 {
+    font-family: "Source Sans Pro",
+                Calibri,Candara,Arial,sans-serif;
+}
+
+circle {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+}
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: auto;					
+    height: auto;					
+    padding: 2px;				
+    font: 15px sans-serif;		
+    background: gainsboro;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;	
+    box-shadow: 0 0 5px #999999;
+    z-index: 10;		
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+input[name="daterange"] {
+    min-width: 180px;
+}
