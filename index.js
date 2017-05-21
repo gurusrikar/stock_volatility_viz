@@ -112,9 +112,6 @@ function drawSpider(dataUrl, numOfDays) {
 				.attr("stroke-width", 1)
 				.attr("fill", "none")
 				.attr("id", function(d) {return linesData[i][0].id;})
-				
-				// .on("mouseover", mouseOverPath)
-				// .on("mouseout" , mouseOutPath)
 		}
 
 		target.append('circle')
@@ -207,28 +204,8 @@ function processEachStockRow(row) {
 
 function groupByProperty(dataArray, key) {
 
-	// var newArray = [];
-	// for (var item in dataArray) {
-	// 	var curStock = dataArray[item][key];
-	// 	if ( dataArray[item]["Date"].isAfter(currentStartDate) && dataArray[item]["Date"].isBefore(currentEndDate) ) {
-	// 	// if ((dataArray[item]["Date"].getTime() >= currentStartDate.getTime()) && (dataArray[item]["Date"].getTime() <= currentEndDate.getTime())) {
-	// 		newArray[curStock] = newArray[curStock] || [];
-	// 		if (newArray[curStock].length != currentNofDays) {
-	// 			newArray[curStock].push(dataArray[item]);
-	// 		}
-	// 	}
-		
-	// }
-
-	// return newArray;
-
-
 	return dataArray.reduce( function (rv, x) {
-		// var xDate = parseInt(x["Date"].getTime());
-		// var curStart = parseInt(currentStartDate.getTime());
-		// var curEnd = parseInt(currentEndDate.getTime());
 		if (x["Date"].isAfter(currentStartDate) && x["Date"].isBefore(currentEndDate)) {
-		// if (xDate >= curStart && xDate <= curEnd) {
 			rv[x[key]] = rv[x[key]] || [];
 			if ( rv[x[key]].length == currentNofDays ) {
 				return rv;
@@ -456,8 +433,6 @@ function getLineIndexFromPoint(x, y) {
 }
 
 function wipeOutPreviousWork() {
-	// d3.selectAll("circle").remove();
-	// d3.selectAll("path").remove();
 	dataStore = undefined;
 	pointsData = [];
 	linesData = [];
